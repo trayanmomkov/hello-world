@@ -13,8 +13,6 @@ import com.vaadin.ui.Notification;
 import com.vaadin.ui.UI;
 import com.vaadin.ui.VerticalLayout;
 
-@Theme("valo")
-@SuppressWarnings("serial")
 public class HelloWorldUI extends UI {
 
     private int clickCounter = 0;
@@ -32,24 +30,12 @@ public class HelloWorldUI extends UI {
         layout.setSpacing(true);
         setContent(layout);
 
-        layout.addComponent(new Label("Hello World!"));
-        layout.addComponent(new Label("Greetings from server."));
-        layout.addComponent(new Label("I have "
-                + Runtime.getRuntime().availableProcessors()
-                + " processors and "
-                + (Runtime.getRuntime().totalMemory() / 1000000)
-                + " MB total memory."));
-
         Button button = new Button("Click Me");
-        button.addClickListener(new Button.ClickListener() {
-
-            @Override
-            public void buttonClick(ClickEvent event) {
+        button.addClickListener(event -> {
                 clickCounter++;
                 clickCounterLabel.setValue("Clicks: " + clickCounter);
                 Notification.show("Thank you for clicking.");
-            }
-        });
+            });
 
         layout.addComponent(button);
         layout.addComponent(clickCounterLabel = new Label("Clicks: 0"));
