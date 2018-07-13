@@ -13,7 +13,7 @@ Make sure you have installed [Maven](http://maven.apache.org/) and [Git](http://
 
     git clone https://github.com/vaadin-samples/hello-world.git
     cd hello-world
-    mvn jetty:run
+    mvn jetty:run -Djetty.port=8080
     
 After these steps you have the application up and running at http://localhost:8080/
 
