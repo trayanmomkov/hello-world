@@ -2,7 +2,7 @@ hello-world
 ===========
 
 Simple Vaadin Hello World application. This project demonstrates:
- * Server side Java code
+ * Server side UI code
  * Event listener for Button
  * Notification
  * Labels in vertical layout
@@ -13,9 +13,9 @@ Make sure you have installed [Maven](http://maven.apache.org/) and [Git](http://
 
     git clone https://github.com/vaadin-samples/hello-world.git
     cd hello-world
-    mvn jetty:run -Djetty.port=8080
+    mvn jetty:run -Djetty.port=8082
     
-After these steps you have the application up and running at http://localhost:8080/
+After these steps you have the application up and running at http://localhost:8082/
 
 You can find the code for the application in [HelloWorldUI.java](src/main/java/org/vaadin/samples/helloworld/HelloWorldUI.java).
 

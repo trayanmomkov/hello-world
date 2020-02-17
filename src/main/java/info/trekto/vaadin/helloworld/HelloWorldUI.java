@@ -1,4 +1,4 @@
-package org.vaadin.samples.helloworld;
+package info.trekto.vaadin.helloworld;
 
 import javax.servlet.annotation.WebServlet;
 
